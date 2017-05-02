@@ -114,16 +114,16 @@ The most popular, modern convention is RESTful routing. Here is an example of an
 || | |
 |---|---|---|
 | **HTTP Verb** | **Path** | **Description** | **Controller#action**
-| GET | /store | Get all stores | stores#index |
-| POST | /store | Create a store | stores#create |
-| GET | /store/:id | Get a store | stores#show |
-| PUT/PATCH | /store/:id | Update a store | stores#update |
-| DELETE | /store/:id | Delete a store | stores#destroy |
-| GET | /store/:storeId/items | Get all items from a store | items#index |
-| POST | /store/:storeId/items | Create an item for a store | items#create |
-| GET | /store/:storeId/items/:itemId | Get an item from a store | items#show |
-| PUT/PATCH | /store/:storeId/items/:itemId | Update an item from a store | items#update |
-| DELETE | /store/:storeId/items/:itemId | Delete an item from a store | items#destroy |
+| GET | /stores | Get all stores | stores#index |
+| POST | /stores | Create a store | stores#create |
+| GET | /stores/:id | Get a store | stores#show |
+| PUT/PATCH | /stores/:id | Update a store | stores#update |
+| DELETE | /stores/:id | Delete a store | stores#destroy |
+| GET | /stores/:storeId/items | Get all items from a store | items#index |
+| POST | /stores/:storeId/items | Create an item for a store | items#create |
+| GET | /stores/:storeId/items/:itemId | Get an item from a store | items#show |
+| PUT/PATCH | /stores/:storeId/items/:itemId | Update an item from a store | items#update |
+| DELETE | /stores/:storeId/items/:itemId | Delete an item from a store | items#destroy |
 
 *In routes resources should not be nested more than one level deep*
 >Note: These routes omit the commonly used `#new` and `#edit` actions, which is common if the server is rendering HTML instead of JSON.
@@ -136,11 +136,13 @@ Create and navigate through relational data in MongoDB
 
 ####Setup
 * startup mongoDB with `mongod`
-* `cd` into the folder `exercise` in this directory
+* `cd` into the folder `starter-code` in this directory
+* `npm install` to bring down all the dependencies
 * `node console.js` to enter into a REPL where you can interact with your DB
 
 ####Tips
 * save your successful code into your text-editor for each successful step
+* `<command>` + `<up>` will bring you to the last thing you entered in the repl 
 
 > Note: All your models will be nested inside an object `db`.
 
